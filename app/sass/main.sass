@@ -15,36 +15,33 @@
 .menu
   width: 76%
   margin: 0 auto
-  padding:
-    top: 1%
-    bottom: 1%
+  padding: 1% 15px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
 
-.logo img
+.logo
   display: block
   width: 180px
   height: auto
+  padding: 0 10px
 
 .menu_holder
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: flex-end
-
-.menu_holder li
-  display: inline-block
-  margin:
-    left: 4%
-
-.menu_holder li a
-  text-decoration: none
-  color: $color1
-  font-size: 18px
-  font-family: "OswaldMedium"
-  transition: 0.5s all
-  &:hover
-    color: rgba(255, 46, 109, 0.9)
-    border-bottom: 1px solid rgba(255, 46, 109, 0.9)
-    transition: 0.5s all
+  li
+    display: inline-block
+    list-style-type: none
+    a
+      text-decoration: none
+      color: $color1
+      font-size: 18px
+      font-family: "OswaldMedium"
+      transition: 0.5s all
+      margin: 0 10px
+      &:hover
+        color: rgba(255, 46, 109, 0.9)
+        border-bottom: 1px solid rgba(255, 46, 109, 0.9)
+        transition: 0.5s all
 
 //2 SECTION
 .bg
