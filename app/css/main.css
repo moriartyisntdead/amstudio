@@ -252,14 +252,18 @@ div.title {
   width: 100%;
   display: block;
   margin: 0 auto;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .section_three_holder {
   width: 76%;
   margin: 0 auto;
   display: block;
+}
+
+#t2 {
+  padding-bottom: 11%;
 }
 
 .portfolio {
@@ -271,48 +275,66 @@ div.title {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
+.portfolio_item {
+  margin: 2px;
+}
+
 .portfolio_left {
   display: block;
-  width: 49%;
+  width: 40%;
+}
+
+.portfolio_center {
+  display: block;
+  width: 29.5%;
 }
 
 .portfolio_right {
   display: block;
-  width: 49%;
+  width: 20%;
+  height: 410px;
 }
 
-.portfolio_item {
+.portfolio_bottom {
+  display: block;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 200px;
-  background: url("../img/inspiration-flatdesign-agency-10.png") 0 100% no-repeat;
-  background-size: cover;
-  margin-top: 0.5%;
-  margin-bottom: 0.5%;
 }
 
-.load_more {
-  background-image: none;
+#p_item1 {
+  display: block;
+  width: 100%;
+  background: #352a3b;
+  height: 300px;
+}
+
+#p_item2 {
+  display: block;
+  width: 100%;
+  background: #352a3b;
+  height: 405px;
+}
+
+#p_item3, #p_item4 {
+  display: block;
+  width: 100%;
+  background: #352a3b;
+  height: 200px;
+  margin-top: 5px;
+}
+
+#p_item5 {
+  display: block;
+  width: 65%;
+  background: #352a3b;
+  height: 200px;
 }
 
 #section_four {
