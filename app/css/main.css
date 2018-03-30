@@ -344,9 +344,8 @@ div.title {
   margin: 0 auto;
   padding-top: 2%;
   padding-bottom: 2%;
-  background: -webkit-radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
-  background: -o-radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
-  background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
+  background: url("../img/services_bg.png") 0 0 no-repeat;
+  background-attachment: fixed;
 }
 
 .section_four_holder {
@@ -485,4 +484,6 @@ div.title {
   padding-bottom: 0.5%;
   background: #424245;
   color: #f2f2f2;
+  font-family: 'OswaldMedium';
+  font-size: 14px;
 }
