@@ -6,7 +6,6 @@ $(function () {
         dots: false,
         slideBy: 1,
         startPosition: 0,
-        autoplay: true,
         loop: true,
         responsive: {
             0: {
