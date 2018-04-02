@@ -13,4 +13,7 @@ $(function () {
             }
         }
     });
+    $('.connect_btn').magnificPopup({type:"inline",midClicl:true,
+        closeBtnInside:true
+    });
 });

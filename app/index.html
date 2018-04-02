@@ -7,6 +7,7 @@
     <!--<link rel="stylesheet" type="text/css" href="libs/bootstrap-grid.min.css">-->
     <link rel="stylesheet" href="libs/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="libs/magnific-popup.css">
     <!-- upload css  end-->
 </head>
 <body>
@@ -113,15 +114,15 @@
         <div class="section_four_holder">
             <div class="section_four_content">
                 <div class="serv">
-                    <img src="img/design.png" alt="">
+                    <a href=""><img src="img/design.png" alt="design"></a>
                     <div class="serv_txt">Дизайн</div>
                 </div>
                 <div class="serv">
-                    <img src="img/fun.png" alt="">
+                    <a href=""><img src="img/fun.png" alt="programming"></a>
                     <div class="serv_txt">Разработка</div>
                 </div>
                 <div class="serv">
-                    <img src="img/seo.png" alt="">
+                    <a href=""><img src="img/seo.png" alt="Seo"></a>
                     <div class="serv_txt">Продвижение</div>
                 </div>
             </div>
@@ -135,11 +136,20 @@
                     Хотите с нами сотрудничать?
                 </div>
                 <div class="line_block">
-                    <a href="" class="connect_btn button_1">Написать нам</a>
+                    <a href="#modal" class="connect_btn button_1">Написать нам</a>
+                    <div id="modal" class="mfp-hide form_holder">
+                            <form action="" id="cat_form">
+                                <span>Оставте свою заявку</span>
+                                <input type="text" placeholder="Имя">
+                                <input type="tel" placeholder="Телефон">
+                                <input type="email" placeholder="E-mail">
+                                <textarea name="" id="" cols="" rows="" placeholder="Текст сообщения"></textarea>
+                                <button id="modal_btn" class = "button_1">Отправить</button>
+                            </form>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
     <div class="footer">
         <div class="footer_holder">
@@ -157,6 +167,7 @@
 </div>
 <script src="libs/jquery-3.3.1.min.js"></script>
 <script src="libs/owl.carousel.min.js"></script>
+<script src="libs/jquery.magnific-popup.min.js"></script>
 <script src="libs/particles.js"></script>
 <script src="libs/bg.js"></script>
 <script src="js/common.js"></script>

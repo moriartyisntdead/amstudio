@@ -208,6 +208,8 @@ div.title
   text-align: center
   transition: opacity, 1s
   border-bottom: 2px solid $color3
+  &:hover
+    transform: translateY(-3%)
   a
     display: block
     text-decoration: none
@@ -274,6 +276,8 @@ div.title
   margin-top: 5px
   background: url('../img/nixlos-screen.jpg') 0 100% no-repeat
   background-size: cover
+  &:hover
+    transform: translatex(3%)
 
 #p_item5
   display: block
@@ -326,8 +330,9 @@ div.title
     height: 300px
     transition: all 1s
     &:hover
-      filter: grayscale(100%)
+      filter: grayscale(30%)
       transition: all 1s
+      transform: translateY(-3%)
 
 
 // footer
@@ -370,6 +375,61 @@ div.title
   flex-direction: row
   align-items: center
   justify-content: flex-end
+
+.form_holder
+  width: 30%
+  height: 570px
+  background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B)
+  margin: 0 auto
+  display: block
+
+#cat_form
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  span
+    font-size: 30px
+    color: $color2
+    text-shadow: $color1 0 1px 1px
+    font-family: "OswaldMedium"
+    padding-top: 40px
+    tex
+  input
+    width: 85%
+    height: 20px
+    border: none
+    outline: none
+    margin-top: 20px
+    background: rgba(255,255,255,0.1)
+    box-shadow: 0 1px 0 0 $color3
+    padding: 10px
+    font-size: 14px
+    font-family: "OswaldMedium"
+    color: $color1
+  textarea
+    width: 85%
+    height: 150px
+    margin-top: 20px
+    margin-bottom: 20px
+    background: rgba(255,255,255,0.1)
+    resize: none
+    border: none
+    outline: none
+    box-shadow: 0 1px 0 0 $color3
+    font-size: 14px
+    font-family: "OswaldMedium"
+    padding: 10px
+  button
+    width: 88.5%
+    border: none
+    oitline: none
+    box-shadow: 0 0 1px 0px $color3
+    padding: 10px
+
+
+
+
 
 .connect_btn
   margin-right: 15.8%
