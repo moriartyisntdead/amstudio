@@ -12,7 +12,9 @@
   font-family: 'OswaldMedium';
   color: #f2f2f2;
   font-size: 16px;
-  background: #424245;
+  background: -webkit-linear-gradient(53deg, #ff2b71 0%, #b73262 52%, #6f3952 100%);
+  background: -o-linear-gradient(53deg, #ff2b71 0%, #b73262 52%, #6f3952 100%);
+  background: linear-gradient(37deg, #ff2b71 0%, #b73262 52%, #6f3952 100%);
   padding: 10px 0;
   width: 200px;
   text-align: center;
@@ -29,12 +31,14 @@
 }
 
 .button_1:hover {
-  background: #424245;
+  background: -webkit-linear-gradient(53deg, #6f3952 0%, #b73262 52%, #ff2b71 100%);
+  background: -o-linear-gradient(53deg, #6f3952 0%, #b73262 52%, #ff2b71 100%);
+  background: linear-gradient(37deg, #6f3952 0%, #b73262 52%, #ff2b71 100%);
   color: #f2f2f2;
   opacity: 0.9;
-  -webkit-transition: all 0.6s linear;
-  -o-transition: all 0.6s linear;
-  transition: all 0.6s linear;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 .wrapper {
@@ -107,17 +111,17 @@
 canvas {
   width: 100% !important;
   height: 600px !important;
-  background: url("../img/bg_animate.png") 0 100% no-repeat transparent;
-  background-size: cover;
 }
 
 .part {
   position: absolute;
   width: 100%;
-  height: 600px;
+  height: 595px;
   background: transparent;
   top: 14%;
   left: 0;
+  background: url("../img/bg_animate.png") 0 100% no-repeat transparent;
+  background-size: cover;
 }
 
 .logo_in {
@@ -666,6 +670,7 @@ div.title {
   display: block;
   margin: 0 auto;
   background: red;
+  padding-top: 5px;
   background: #424245;
 }
 
