@@ -46,32 +46,54 @@
 
 //2 SECTION
 .bg
-  height: 600px
+  height: 85vh
 
 canvas
   width: 100% !important
-  height: 600px !important
+  height: 85vh !important
 
 .part
   position: absolute
   width: 100%
-  height: 595px
+  height: 84.5vh
   background: transparent
   top: 14%
   left: 0
   background: url("../img/bg_animate.png") 0 100% no-repeat transparent
   background-size: cover
 
-.logo_in
+.steam img
+  width: 20px
+  height: 50px
   position: absolute
   display: block
-  top: 200px
-  left: 40%
-  background: url('../img/am_logo.png') no-repeat
-  background-size: cover
-  width: 400px
-  height: 205px
-  margin: 10px auto
+  bottom: 11.5%
+  left: 15.5%
+
+.steam1
+  animation: steam_animate 5s linear infinite
+.steam2
+  animation: steam_animate 7s linear infinite
+  animation-delay: 2s
+.steam3
+  animation: steam_animate 8s linear infinite
+  animation-delay: 5s
+
+@keyframes steam_animate
+    0%
+      transform: scale(1) translateY(-10%)
+      opacity: 0
+    60%
+      opacity: 0.4
+      transform: scale(1.1) translateY(-25%)
+    80%
+      opacity: 0.8
+      transform: scale(1) translateY(-25%)
+    99%
+      opacity: 0.4
+    100%
+      transform: scale(1) translateY(-25%)
+      opacity: 0
 
 // SECTION
 #section_two
