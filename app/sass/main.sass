@@ -59,41 +59,89 @@ canvas
   background: transparent
   top: 14%
   left: 0
-  background: url("../img/bg_animate.png") 0 100% no-repeat transparent
-  background-size: cover
+.progger img
+  display: block
+  position: absolute
+  bottom: 0
 
 .steam img
   width: 20px
   height: 50px
   position: absolute
   display: block
-  bottom: 11.5%
-  left: 15.5%
+  bottom: 9.5%
+  left: 12.5%
 
 .steam1
-  animation: steam_animate 5s linear infinite
+  animation: steam_animate 4s linear infinite alternate
 .steam2
-  animation: steam_animate 7s linear infinite
+  animation: steam_animate 5s linear infinite alternate
   animation-delay: 2s
 .steam3
-  animation: steam_animate 8s linear infinite
+  animation: steam_animate 6s linear infinite alternate-reverse
   animation-delay: 5s
 
 @keyframes steam_animate
     0%
       transform: scale(1) translateY(-10%)
-      opacity: 0
     60%
-      opacity: 0.4
+      opacity: 0.7
       transform: scale(1.1) translateY(-25%)
     80%
       opacity: 0.8
-      transform: scale(1) translateY(-25%)
+      transform: scale(1.2) translateY(-25%)
     99%
-      opacity: 0.4
+      opacity: 0.7
+      transform: scale(1.1) translateY(-25%)
     100%
-      transform: scale(1) translateY(-25%)
-      opacity: 0
+      transform: scale(1.1) translateY(-25%)
+
+.symbol
+  display: block
+  font-size: 30px
+  font-family: "OswaldMedium"
+  color: $color3
+  position: absolute
+  top: 60%
+  left: 10%
+  opacity: 0
+  animation: symbol 5s linear 4s
+
+
+@keyframes symbol
+  0%
+    opacity: 0
+  80%
+    opacity: 1
+  99%
+    opacity: 0
+  100%
+    opacity: 0
+
+.linear
+  width: 3px
+  display: block
+  position: absolute
+  top: 0
+  height: 35vh
+  opacity: 0
+  left: 10.5%
+  background: #000
+  transition: height 5s
+  animation: line 4s linear 4s
+
+@keyframes line
+    0%
+      height: 0
+      opacity: 1
+    99%
+      height: 35vh
+      opacity: 1
+    100%
+      height: 35%
+      opacity: 1
+
+
 
 // SECTION
 #section_two
