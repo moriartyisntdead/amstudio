@@ -113,10 +113,19 @@ canvas {
   height: 85vh !important;
 }
 
+.part {
+  position: absolute;
+  width: 100%;
+  height: 84.7vh;
+  background: transparent;
+  top: 14%;
+  left: 0;
+}
+
 .progger img {
   display: block;
   position: absolute;
-  bottom: 1.3%;
+  bottom: 0;
 }
 
 .steam img {
