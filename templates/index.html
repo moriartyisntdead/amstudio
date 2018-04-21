@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+    <div class="section" id="section_one">
+        <div class="bg">
+            <div id="particles-js">
+                <div class="part">
+                    <div class="logo_in"></div>
+                    <div class="line1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="section_two">
+        <div class="section_two_holder">
+            <div class="section_two_container">
+                <div class="section_two_left">
+                    <div class="title">
+                        O нас
+                    </div>
+                    <p class="text_about">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur cum doloremque, eligendi enim ex hic iste, iure nulla omnis optio quia quidem reiciendis soluta ut, voluptate voluptatem voluptatibus?</span><span>Adipisci corporis cumque cupiditate deleniti deserunt dolorem incidunt ipsam itaque, minima molestias mollitia natus nihil nisi nobis obcaecati pariatur praesentium, rerum sunt velit vitae? Alias libero optio quas ratione voluptatem.</span><span>Accusantium aperiam aspernatur at, cupiditate dolore hic, laudantium magni necessitatibus odio optio praesentium repudiandae rerum tempora, veritatis vero! Aliquid eos facere obcaecati officiis voluptate? Dolorem fugit perferendis praesentium quia temporibus.</span><span>Numquam qui quis suscipit tempora temporibus! Accusamus, cupiditate dicta dolore dolorem enim explicabo minima molestiae molestias possimus suscipit ut vero! Consequuntur, cum cumque dolor ipsum mollitia nam officia saepe sapiente.</span>
+                    </p>
+                    <a href="" class="more" id="more_btn">Подробнее</a>
+                </div>
+
+                <div class="section_two_right">
+                    <div class="about_img">
+                    </div>
+                </div>
+            </div>
+            {% if technologies.exists %}
+                <div class="owl-carousel" style="box-sizing: border-box">
+                    {% for technology in technologies %}
+                        <div><img src="{{ technology.icon.url }}" alt="{{ technology.name }}"></div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>Нет технологий для показа</p>
+            {% endif %}
+
+        </div>
+    </section>
+    <section id="section_three">
+        <div class="section_three_holder">
+            {% if recent_projects.0 %}
+                <div class="portfolio">
+                    <div class="portfolio_left">
+                        <div class="title" id="t2">Наши проекты</div>
+                        <div class="portfolio_item"
+                             style="background: url('{{ recent_projects.0.image.url }}') 0 100% no-repeat;"
+                             id="p_item1">
+                            <div class="item_container">
+                                <a href="" class="portfolio_title_link"> {{ recent_projects.0.name }}</a>
+                                <a href="" class="button_1">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% if recent_projects.1 %}
+                        <div class="portfolio_center">
+                            <div class="portfolio_item"
+                                 style="background: url('{{ recent_projects.1.image.url }}') 0 100% no-repeat;"
+                                 id="p_item2">
+                                <div class="item_container">
+                                    <a href="" class="portfolio_title_link">{{ recent_projects.1.name }}</a>
+                                    <a href="" class="button_1">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if recent_projects.2 %}
+                        <div class="portfolio_center">
+                            <div class="portfolio_item"
+                                 style="background: url('{{ recent_projects.2.image.url }}') 0 100% no-repeat;"
+                                 id="p_item3">
+                                <div class="item_container">
+                                    <a href="" class="portfolio_title_link">{{ recent_projects.2.name }}</a>
+                                    <a href="" class="button_1">Подробнее</a>
+                                </div>
+                            </div>
+                            {% if recent_projects.3 %}
+                                <div class="portfolio_item"
+                                     style="background: url('{{ recent_projects.3.image.url }}') 0 100% no-repeat;"
+                                     id="p_item4">
+                                    <div class="item_container">
+                                        <a href="" class="portfolio_title_link">{{ recent_projects.3.name }}</a>
+                                        <a href="" class="button_1">Подробнее</a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+            {% if recent_projects.4 %}
+                <div class="portfolio_bottom">
+                    <div class="portfolio_item"
+                         style="background: url('{{ recent_projects.4.image.url }}') 0 100% no-repeat;" id="p_item5">
+                        <div class="item_container">
+                            <a href="" class="portfolio_title_link">{{ recent_projects.4.name }}</a>
+                            <a href="" class="button_1">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio_btn_block">
+                        <a href="" class="button_1">Показать больше</a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+    <div id="section_four">
+        <div class="section_four_holder">
+            <div class="section_four_content">
+                <div class="serv">
+                    <a href=""><img src="{% static "img/design.png" %}" alt="design"></a>
+                    <div class="serv_txt">Дизайн</div>
+                </div>
+                <div class="serv">
+                    <a href=""><img src="{% static "img/fun.png" %}" alt="programming"></a>
+                    <div class="serv_txt">Разработка</div>
+                </div>
+                <div class="serv">
+                    <a href=""><img src="{% static "img/seo.png" %}" alt="Seo"></a>
+                    <div class="serv_txt">Продвижение</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cta">
+        <div class="cta_holder">
+            <div class="cta_content">
+                <img src="{% static "img/am_logo.png" %}" alt="footer-logo" class="f_logo">
+                <div class="title" id="t3">
+                    Хотите с нами сотрудничать?
+                </div>
+                <div class="line_block">
+                    <a href="#modal" class="connect_btn button_1">Написать нам</a>
+                    <div id="modal" class="mfp-hide form_holder">
+                        <form action="" id="cat_form">
+                            <span>Оставте свою заявку</span>
+                            <input type="text" placeholder="Имя">
+                            <input type="tel" placeholder="Телефон">
+                            <input type="email" placeholder="E-mail">
+                            <textarea name="" id="" cols="" rows="" placeholder="Текст сообщения"></textarea>
+                            <button id="modal_btn" class="button_1">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .portfolio_item {
+            background-size: cover !important;
+        }
+    </style>
+{% endblock %}
