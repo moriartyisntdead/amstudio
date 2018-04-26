@@ -3,5 +3,5 @@ Pillow==5.1.0
 python-decouple==3.1
 pytz==2018.4
 gunicorn==19.7.1
-whitenoise=3.3.1
+whitenoise==3.3.1
 dj_database_url==0.5.0
