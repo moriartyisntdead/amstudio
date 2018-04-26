@@ -40,10 +40,14 @@
             {% else %}
                 <p>Нет технологий для показа</p>
             {% endif %}
+            {% if request.user.is_staff %}
+            <a href="{% url "admin:amstudio_technology_changelist" %}">Редактировать</a>
+            {% endif %}
 
         </div>
     </section>
     <section id="section_three">
+        {% if recent_projects.exists %}
         <div class="section_three_holder">
             {% if recent_projects.0 %}
                 <div class="portfolio">
@@ -109,6 +113,12 @@
                 </div>
             {% endif %}
         </div>
+        {% else %}
+        <p>Нет проэктов для показа</p>
+        {% endif %}
+        {% if request.user.is_staff %}
+        <a href="{% url "admin:amstudio_project_changelist" %}">Редактировать</a>
+        {% endif %}
     </section>
     <div id="section_four">
         <div class="section_four_holder">
@@ -138,13 +148,19 @@
                 <div class="line_block">
                     <a href="#modal" class="connect_btn button_1">Написать нам</a>
                     <div id="modal" class="mfp-hide form_holder">
-                        <form action="" id="cat_form">
+                        <form method="post" id="cat_form">
+                            {% csrf_token %}
                             <span>Оставте свою заявку</span>
-                            <input type="text" placeholder="Имя">
-                            <input type="tel" placeholder="Телефон">
-                            <input type="email" placeholder="E-mail">
-                            <textarea name="" id="" cols="" rows="" placeholder="Текст сообщения"></textarea>
-                            <button id="modal_btn" class="button_1">Отправить</button>
+                            {{ form.non_field_errors }}
+                            <input type="text" name="{{ form.name.name }}" placeholder="{{ form.name.label }}" required id="{{ form.name.id_for_label }}">
+                            {{ form.name.errors }}
+                            <input type="text" name="{{ form.phone.name }}" placeholder="{{ form.phone.label }}" required id="{{ form.phone.id_for_label }}">
+                            {{ form.phone.errors }}
+                            <input type="text" name="{{ form.email.name }}" placeholder="{{ form.email.label }}" required id="{{ form.email.id_for_label }}">
+                            {{ form.email.errors }}
+                            <textarea name="{{ form.message.name }}" placeholder="{{ form.message.label }}" required id="{{ form.message.id_for_label }}"></textarea>
+                            {{ form.message.errors }}
+                            <button id="modal_btn" class="button_1" type="submit">Отправить</button>
                         </form>
                     </div>
                 </div>
