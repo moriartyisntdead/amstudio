@@ -1,7 +1,7 @@
 from django import forms
 from django.conf import settings
 from django.contrib.auth.models import User
-from django.core.mail import send_mail, send_mass_mail
+from django.core.mail import send_mail
 
 
 class ContactForm(forms.Form):
